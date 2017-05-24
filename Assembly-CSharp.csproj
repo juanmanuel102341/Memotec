@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\scripts\Boton.cs" />
      <Compile Include="Assets\scripts\Carta.cs" />
      <Compile Include="Assets\scripts\Main.cs" />
  <Reference Include="UnityEngine.UI">

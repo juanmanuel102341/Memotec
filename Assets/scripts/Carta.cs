@@ -8,6 +8,8 @@ public class Carta : MonoBehaviour {
 	private Material materialSimbolo;
 	private Material materialCarta;
 	private string currentMaterial;
+	private string simbololo;
+	private bool fin=false;
 //	private bool activeCarta=false;
 	// Use this for initialization
 	void Start () {
@@ -15,6 +17,7 @@ public class Carta : MonoBehaviour {
 		materialCarta=mesh.material;
 		currentMaterial=materialCarta.name;
 		print("nombre material "+currentMaterial);
+		fin=false;
 	}
 	
 	void OnMouseDown(){
@@ -29,6 +32,7 @@ public class Carta : MonoBehaviour {
 		}
 	public void SetSimbolo(Material _mat){
 		materialSimbolo=_mat;
+		simbololo=materialSimbolo.name;
 	}
 	public bool Active(){
 		return active;
@@ -54,7 +58,7 @@ public class Carta : MonoBehaviour {
 	public void Vuelta_simbolo(){
 		mesh.material=materialSimbolo;
 		currentMaterial=materialSimbolo.name;
-//		print("nombre material "+currentMaterial);
+		print("nombre material "+materialSimbolo.name);
 	}
 	public string GetMaterial(){
 		return currentMaterial; 
@@ -63,7 +67,14 @@ public class Carta : MonoBehaviour {
 		return materialCarta.name;
 	}
 	public string GetSimbol(){
-		return simbolo;
+		return simbololo;
+	}
+	public bool GetSalio(){
+		return fin;
+	}
+	public void SetSalio(bool set_bool){
+		fin=set_bool;
+			
 	}
 
 
